@@ -1,0 +1,64 @@
+[gd_scene load_steps=6 format=1]
+
+[ext_resource path="res://main.gd" type="Script" id=1]
+[ext_resource path="res://Base/PINBALL_base.scn" type="PackedScene" id=2]
+[ext_resource path="res://accesorios/Potenciador-000.tscn" type="PackedScene" id=3]
+[ext_resource path="res://accesorios/Potenciador-001.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Hub/Hub.tscn" type="PackedScene" id=5]
+
+[node name="main" type="Spatial"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+script/script = ExtResource( 1 )
+
+[node name="PINBALL_base" parent="." instance=ExtResource( 2 )]
+
+transform/local = Transform( 3.12041, 0, 0, 0, 2.99744, -0.867378, 0, 0.867378, 2.99744, 0, 0, 0 )
+
+[node name="techo" parent="PINBALL_base"]
+
+editor/display_folded = true
+
+[node name="Area" parent="PINBALL_base"]
+
+editor/display_folded = true
+
+[node name="Accesorios" type="Node" parent="PINBALL_base"]
+
+[node name="Spatial" parent="PINBALL_base/Accesorios" instance=ExtResource( 3 )]
+
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 13.4046, 6.69414, -20.2138 )
+
+[node name="Spatial 2" parent="PINBALL_base/Accesorios" instance=ExtResource( 4 )]
+
+transform/local = Transform( 1, 0, 0, 0, 0.931776, -0.363034, 0, 0.363034, 0.931776, 18.5204, 4.08663, -13.6331 )
+
+[node name="salida" type="Position3D" parent="."]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19.498, 4.08436, -1.25386 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+editor/display_folded = true
+layer = 1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 40.0
+margin/bottom = 40.0
+
+[node name="Hub" parent="CanvasLayer/Control" instance=ExtResource( 5 )]
+
+
+[editable path="PINBALL_base"]
+[editable path="PINBALL_base/PINBALL_golpeador_derecho"]
