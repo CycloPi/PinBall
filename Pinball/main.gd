@@ -14,7 +14,7 @@ func _ready():
 func _fixed_process(delta):
 
 	if (GLOBAL.bolas == 0 and GLOBAL.bolas_juego == 0):
-		print("gam e over , mete la funcion muete")
+		print("Game over , mete la funcion muere")
 	
 func _input(event):
 	var salida = get_node("salida").get_global_transform()

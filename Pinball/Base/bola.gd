@@ -18,9 +18,7 @@ func _on_Area_bola_area_enter( area ):
 		queue_free()
 		print ("Una bola menos",area)
 		
-	if (grupikos.has("5Puntos")):
-		GLOBAL.puntos += 5
-		print("5 puntos")
+	
 		
 	if (grupikos.has("2Puntos")):
 		GLOBAL.puntos += 2

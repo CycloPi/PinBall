@@ -15,4 +15,4 @@ func _process(delta):
 	contador_bolas_juego.set_text("Bolas en juego:"+str(GLOBAL.bolas_juego))
 	
 	contador_puntos= get_node("Puntos")
-	contador_puntos.set_text("puntos:"+str(GLOBAL.puntos))
+	contador_puntos.set_text("Puntos:"+str(GLOBAL.puntos))
