@@ -1,14 +1,18 @@
 extends RigidBody
 
-# class member variables go here, for example:
-# var a = 2
-# var b = "textvar"
+
 
 func _ready():
-	# Called every time the node is added to the scene.
-	# Initialization here
+	set_fixed_process(true)
 	pass
 
+func _fixed_process(delta):
+#	var cuerpos = get_colliding_bodies()
+#	print("Diana")
+#	for i in cuerpos:
+#		if (cuerpos[i].get_goup() == "Diana"):
+#			print("Diana")
+	pass
 
 func _on_Area_bola_area_enter( area ):
 	
@@ -25,7 +29,4 @@ func _on_Area_bola_area_enter( area ):
 		print("2 puntos")
 
 
-	
-	
-		print (area)
 

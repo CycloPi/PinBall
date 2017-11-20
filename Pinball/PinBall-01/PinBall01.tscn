@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=1]
+[gd_scene load_steps=5 format=1]
 
 [ext_resource path="res://Base/PINBALL_base.scn" type="PackedScene" id=1]
-[ext_resource path="res://accesorios/Potenciador-000.tscn" type="PackedScene" id=2]
+[ext_resource path="res://accesorios/Diana000.scn" type="PackedScene" id=2]
 [ext_resource path="res://accesorios/potenciador001.scn" type="PackedScene" id=3]
+[ext_resource path="res://accesorios/Potenciador-000.tscn" type="PackedScene" id=4]
 
 [node name="PinBall01" type="Spatial"]
 
@@ -10,48 +11,83 @@ _import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="PINBALL_base" parent="." instance=ExtResource( 1 )]
 
-[node name="2Puntos" parent="." instance=ExtResource( 2 )]
+[node name="Dianas" type="Spatial" parent="."]
 
-transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -13.4422, 0, -10.9182 )
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 27.8529, 0, -6.0736 )
 
-[node name="2Puntos1" parent="." instance=ExtResource( 2 )]
+[node name="Diana000" parent="Dianas" instance=ExtResource( 2 )]
 
-transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -13.4422, 0, 0 )
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10.3143, 0, 0 )
 
-[node name="2Puntos2" parent="." instance=ExtResource( 2 )]
+[node name="Diana1" parent="Dianas" instance=ExtResource( 2 )]
 
-transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.6145, 0, 0 )
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9.81309, 0, 0 )
 
-[node name="2Puntos3" parent="." instance=ExtResource( 2 )]
+[node name="Diana2" parent="Dianas" instance=ExtResource( 2 )]
 
-transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.81198, 0, 0 )
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9.30734, 0, 0 )
 
-[node name="2Puntos4" parent="." instance=ExtResource( 2 )]
+[node name="Diana3" parent="Dianas" instance=ExtResource( 2 )]
 
-transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12.8404, 0, 0 )
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.80057, 0, 0 )
 
-[node name="5Puntos" parent="." instance=ExtResource( 3 )]
+[node name="Diana4" parent="Dianas" instance=ExtResource( 2 )]
+
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.29381, 0, 0 )
+
+[node name="Rebotadores" type="Spatial" parent="."]
+
+editor/display_folded = true
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+
+[node name="5Puntos" parent="Rebotadores" instance=ExtResource( 3 )]
 
 transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12.1047, 0, -33.0822 )
 
-[node name="5Puntos1" parent="." instance=ExtResource( 3 )]
+[node name="5Puntos1" parent="Rebotadores" instance=ExtResource( 3 )]
 
+editor/display_folded = true
 transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10.2529, 0, -18.6592 )
 
-[node name="5Puntos2" parent="." instance=ExtResource( 3 )]
+[node name="5Puntos2" parent="Rebotadores" instance=ExtResource( 3 )]
 
 transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.54221, 0, -26.073 )
 
-[node name="5Puntos3" parent="." instance=ExtResource( 3 )]
+[node name="5Puntos3" parent="Rebotadores" instance=ExtResource( 3 )]
 
 transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.99908, 0, -26.073 )
 
-[node name="5Puntos4" parent="." instance=ExtResource( 3 )]
+[node name="5Puntos4" parent="Rebotadores" instance=ExtResource( 3 )]
 
 transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9.63051, 0, -26.073 )
 
-[node name="5Puntos5" parent="." instance=ExtResource( 3 )]
+[node name="5Puntos5" parent="Rebotadores" instance=ExtResource( 3 )]
 
 transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -15.5687, 0, -26.073 )
+
+[node name="Puntos de control" type="Spatial" parent="."]
+
+editor/display_folded = true
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.81198, 0, 0 )
+
+[node name="2Puntos" parent="Puntos de control" instance=ExtResource( 4 )]
+
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -17.2542, 0, -10.9182 )
+
+[node name="2Puntos1" parent="Puntos de control" instance=ExtResource( 4 )]
+
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -17.2542, 0, 0 )
+
+[node name="2Puntos2" parent="Puntos de control" instance=ExtResource( 4 )]
+
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.42648, 0, 0 )
+
+[node name="2Puntos3" parent="Puntos de control" instance=ExtResource( 4 )]
+
+[node name="2Puntos4" parent="Puntos de control" instance=ExtResource( 4 )]
+
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.02842, 0, 0 )
 
 
