@@ -14,6 +14,7 @@ func _ready():
 func _fixed_process(delta):
 
 	if (GLOBAL.bolas == 0 and GLOBAL.bolas_juego == 0):
+		get_node("/root/GLOBAL").goto_scene("res://Hub/EscenaGameOver.tscn")
 		print("Game over , mete la funcion muere")
 	
 func _input(event):
@@ -32,4 +33,8 @@ func _input(event):
 #añade una a la reserva
 	if Input.is_action_pressed("ui_down"):
 		GLOBAL.bolas +=1
+#escape para salir
+	if Input.is_action_pressed("ui_cancel"):
+		get_tree().quit()
 		
+	
