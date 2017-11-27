@@ -34,7 +34,7 @@ contact_monitor = true
 sleeping = false
 can_sleep = true
 axis_lock = 0
-velocity/linear = Vector3( 20, 20, 20 )
+velocity/linear = Vector3( 0, 0, 0 )
 velocity/angular = Vector3( 0, 0, 0 )
 damp_override/linear = -1.0
 damp_override/angular = -1.0
@@ -52,6 +52,7 @@ _update_shape_index = 0
 "bola",
 ]]
 
+editor/display_folded = true
 _import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 input/ray_pickable = false
 input/capture_on_drag = false
@@ -82,8 +83,10 @@ _update_shape_index = 0
 
 [node name="PINBALL_bola" parent="." instance=ExtResource( 2 )]
 
+editor/display_folded = true
 transform/local = Transform( 1.33436, 0, 0, 0, 1.33436, 0, 0, 0, 1.33436, 0, 0, 0 )
 
 [connection signal="area_enter" from="Area_bola" to="." method="_on_Area_bola_area_enter"]
 
 
+[editable path="PINBALL_bola"]
