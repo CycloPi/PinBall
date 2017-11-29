@@ -5,13 +5,16 @@ var bolas = 3
 var bolas_juego = 0
 #puntos
 var puntos = 0
+
+# para cambiar de pantalla ######### comienzo
 var current_scene = null
 
 func _ready():
         var root = get_tree().get_root()
         current_scene = root.get_child( root.get_child_count() -1 )
-# para cambiar de pantalla ######### comienzo
+# para cambiar de pantalla ######### comienzo DE DEFINICION DE FUNCIONES
 ### funcion que ejecuta el comando cambio de pantalla###
+
 ### goto_scene(la ruta de la pantalla):
 func goto_scene(path):
     # This function will usually be called from a signal callback,
