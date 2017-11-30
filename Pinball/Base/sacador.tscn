@@ -1,10 +1,52 @@
-[gd_scene load_steps=3 format=1]
+[gd_scene load_steps=6 format=1]
 
 [ext_resource path="res://Base/sacador.gd" type="Script" id=1]
+[ext_resource path="res://Base/Sonido/golpeSalida.wav" type="Sample" id=2]
 
 [sub_resource type="BoxShape" id=1]
 
-extents = Vector3( 1, 1, 0.211327 )
+extents = Vector3( 1, 1, 1.50174 )
+
+[sub_resource type="FixedMaterial" id=3]
+
+flags/visible = true
+flags/double_sided = false
+flags/invert_faces = false
+flags/unshaded = false
+flags/on_top = false
+flags/lightmap_on_uv2 = true
+flags/colarray_is_srgb = true
+params/blend_mode = 0
+params/depth_draw = 1
+params/line_width = 0.0
+fixed_flags/use_alpha = false
+fixed_flags/use_color_array = false
+fixed_flags/use_point_size = false
+fixed_flags/discard_alpha = false
+fixed_flags/use_xy_normalmap = false
+params/diffuse = Color( 0.9375, 0.0292969, 0.0292969, 1 )
+params/specular = Color( 0, 0, 0, 1 )
+params/emission = Color( 0, 0, 0, 1 )
+params/specular_exp = 40
+params/detail_mix = 1.0
+params/normal_depth = 1
+params/shader = 0
+params/shader_param = 0.5
+params/glow = 0
+params/point_size = 1.0
+uv_xform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+textures/diffuse_tc = 0
+textures/detail_tc = 0
+textures/specular_tc = 0
+textures/emission_tc = 0
+textures/specular_exp_tc = 0
+textures/glow_tc = 0
+textures/normal_tc = 0
+textures/shade_param_tc = 0
+
+[sub_resource type="SampleLibrary" id=2]
+
+samples/golpeSalida = { "db":0.0, "pitch":1.0, "sample":ExtResource( 2 ) }
 
 [node name="sacador" type="KinematicBody"]
 
@@ -13,7 +55,7 @@ input/ray_pickable = true
 input/capture_on_drag = false
 shape_count = 1
 shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+shapes/0/transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.31032 )
 shapes/0/trigger = false
 collision/layers = 1
 collision/mask = 1
@@ -30,7 +72,7 @@ _import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 0.2, 0, 0, 0 )
 layers = 1
 geometry/visible = true
-geometry/material_override = null
+geometry/material_override = SubResource( 3 )
 geometry/cast_shadow = 1
 geometry/receive_shadows = true
 geometry/range_begin = 0.0
@@ -46,8 +88,26 @@ geometry/baked_light_tex_id = 0
 [node name="CollisionShape" type="CollisionShape" parent="."]
 
 _import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.31032 )
 shape = SubResource( 1 )
 trigger = false
 _update_shape_index = 0
+
+[node name="SamplePlayer" type="SamplePlayer" parent="."]
+
+config/polyphony = 1
+config/samples = SubResource( 2 )
+default/volume_db = 0.0
+default/pitch_scale = 1.0
+default/pan = 0.0
+default/depth = 0.0
+default/height = 0.0
+default/filter/type = 0
+default/filter/cutoff = 5000.0
+default/filter/resonance = 1.0
+default/filter/gain = 1.0
+default/reverb_room = 2
+default/reverb_send = 0.0
+default/chorus_send = 0.0
 
 

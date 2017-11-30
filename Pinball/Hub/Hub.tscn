@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=1]
+[gd_scene load_steps=5 format=1]
 
 [ext_resource path="res://Hub/Hub.gd" type="Script" id=1]
 [ext_resource path="res://Hub/450x270-fondo7sementos.png" type="Texture" id=2]
 [ext_resource path="res://Hub/tiposgrafias/tipo_led_principal.fnt" type="BitmapFont" id=3]
+[ext_resource path="res://Hub/logo-grende.png" type="Texture" id=4]
 
 [node name="Hub" type="Node"]
 
@@ -67,5 +68,30 @@ custom_colors/font_color_shadow = Color( 0, 0, 1, 1 )
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
+
+[node name="Bola" type="Label" parent="."]
+
+rect/scale = Vector2( 0.15, 0.15 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 1063.0
+margin/top = 22.0
+margin/right = 2413.0
+margin/bottom = 210.0
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 1, 1 )
+text = "FREE BALL"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Sprite 2" type="Sprite" parent="."]
+
+transform/pos = Vector2( 974.531, 101.561 )
+transform/scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 4 )
 
 
