@@ -10,7 +10,7 @@ func _ready():
 	pass
 
 func _on_Area_area_enter( area ):
-#	print ("Dentro del area")
+	print ("Dentro del area DIANA")
 	if (area.get_groups().has("bola") and DianaAbajo == false):
 		animacion.play("Bajar diana")
 		DianaAbajo = true

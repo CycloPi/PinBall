@@ -29,12 +29,13 @@ func _process(delta):
 		animacion3.play("Subir diana")
 		animacion4.play("Subir diana")
 		
-		cuentaDianasAbajo = 0
+		
 		Diana.DianaAbajo = false
 		Diana1.DianaAbajo = false
 		Diana2.DianaAbajo = false
 		Diana3.DianaAbajo = false
 		Diana4.DianaAbajo = false
+		cuentaDianasAbajo = 0
 	
 	
 
